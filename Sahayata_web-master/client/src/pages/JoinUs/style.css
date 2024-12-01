@@ -1,0 +1,139 @@
+/* Global Page Styling */
+.join-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #b92e68 0%, #EC297B 100%);
+    padding: 20px;
+}
+
+.join-container {
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    color: #333;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 50px;
+    background-color: #EC297B;
+}
+
+.content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-box {
+    width: 100%;
+}
+
+.input-box .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box select:focus {
+    border-color: #EC297B;
+}
+
+.gender-details {
+    margin-bottom: 15px;
+}
+
+.gender-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.category {
+    display: flex;
+    justify-content: space-between;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+}
+
+.radio-item input {
+    margin-right: 10px;
+}
+
+.button {
+    margin-top: 15px;
+}
+
+.button button {
+    width: 100%;
+    padding: 12px;
+    background-color: #EC297B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button button:hover {
+    background-color: #b92e68;
+}
+
+.button button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .join-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .category {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
